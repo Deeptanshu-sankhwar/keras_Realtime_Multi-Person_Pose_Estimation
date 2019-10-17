@@ -35,8 +35,6 @@ if __name__ == '__main__':
 
     # Video input
     video = args.video
-    video_path = 'videos/'
-    video_file = video_path + video
 
     # Output location
     output_path = 'videos/outputs/'
@@ -53,7 +51,7 @@ if __name__ == '__main__':
     params, model_params = config_reader()
 
     # Video reader
-    cam = cv2.VideoCapture(video_file)
+    cam = cv2.VideoCapture(video)
     input_fps = cam.get(cv2.CAP_PROP_FPS)
     ret_val, orig_image = cam.read()
     video_length = int(cam.get(cv2.CAP_PROP_FRAME_COUNT))
